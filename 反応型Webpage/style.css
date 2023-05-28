@@ -1,0 +1,214 @@
+body{
+    font-family: 'Yusei Magic', sans-serif;
+    margin: 0;
+    background-color: #ACB1D6 ;
+    
+}
+
+main{
+    position: relative;
+    top: 6.25rem; /*100px*/
+    z-index: -1;
+}
+
+a{
+    text-decoration: none;
+}
+
+#main-header{
+     height: 5rem; /* 5rem = 16 x 5 */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #DBDFEA;
+     padding: 0 5%; /*패딩 5퍼 반응형에서도 자주사용하는듯*/
+}
+#logo{
+    font-size: 3.124rem;  /* 50 px 로 하고싶어서*/
+    font-weight: bold;
+    color: #27374D;
+    text-shadow: 1px 1px 3px yellow;
+}
+
+.menu-btn{
+    
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* display: none; */
+}
+
+.menu-btn span{
+    
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgb(2, 40, 255);
+}
+
+
+#main-header ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-header li{
+    margin: 0 1rem; /* 16px = 1rem*/
+}
+
+#nav-items a{
+    font-size: 1.25rem; /*20px 나누기 16*/
+    color: #FFB84C;
+    text-shadow: 1px 1px 2px rgb(0,0,0);
+}
+#nav-items a:hover{
+    color: #000000;
+    border: 1px solid #FEFF86;
+    background-color: #FEFF86;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+#side-drawer{
+     
+    width: 100%;
+    height: 100%;
+    background-color: #27374D; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#side-drawer:target {
+    display: block;
+}
+
+#side-drawer header{
+    height: 5rem; /* 5rem = 16 x 5 */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%; /*패딩 5퍼 반응형에서도 자주사용하는듯*/
+}
+#side-drawer ul{
+    margin:0;
+    padding: 4rem;
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#side-drawer li{
+    margin: 1rem 0;
+}
+
+#side-drawer a {
+    color: #ffffff;
+    font-size: 2rem;
+}
+ 
+main h1{
+    text-align: center;
+    color: rgb(238,164,80);
+    text-shadow: 1px 1px 1px black;
+    font-size: 3.125rem;
+}
+
+#latest-products {
+    width: 70%;
+    margin: 0 auto ;
+    
+}
+.food-items{
+    list-style: none;   
+    background-color: #8294C4; 
+    border-radius: 10px; /*보더는 픽샐로 ㄱㅊ다고함 */
+    overflow: hidden;
+}
+
+#latest-products ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*1:1 비율*/
+    gap: 1.25rem;
+    padding: 0px;
+} 
+
+
+article{
+    padding: 10px;
+}
+
+#Mobile-nav{
+    display: none;
+}
+
+
+.food-items img{ 
+  height: 25rem; /* 400 px */
+  width: 100%;
+  object-fit: cover;
+}
+
+.food-items-content{
+    padding: 0.3rem;
+    text-align: right;
+}
+.food-items-content h2{
+    padding: 0.3rem;
+    text-align: center;
+    color: rgb(245, 210, 52);
+    text-shadow: 1px 1px 5px black;
+   
+}
+
+.btn{
+    color: #DBDFEA;
+    /* border: 1px solid black; */
+    background-color: #27374D;
+    padding: 0.3rem 0.625rem;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: aliceblue;
+    color: #000000;
+}
+
+footer{
+    position: relative;
+    top: 12.5rem;
+}
+
+#footer-image{
+    background-color: #3b3b3b;
+    text-align: center;
+}
+
+#footer-image img{
+    height: 5.625rem; /*90px*/
+    width: 5.625rem;
+    padding: 1.25rem; /*20*/
+}
+
+
+@media (max-width:48rem){
+    #nav-items{
+        display: none;
+    }
+    #Mobile-nav{
+        display: block;
+    }
+    #logo{
+        font-size: 2rem;
+    }
+    #latest-products ul{
+        grid-template-columns: 100%;
+    }
+}
+
